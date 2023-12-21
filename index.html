@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CCO-118500 Muhammad Abdul Mustafa Qadri</h1>
+    <h1>Q 1</h1>
+    <script>
+        // Prompt user to enter a character
+var userInput = prompt("Enter a character (number or string):");
+
+// Convert the first character to its ASCII code
+var charCode = userInput.charCodeAt(0);
+
+// Check whether the input is a number, uppercase letter, or lowercase letter
+if (!isNaN(userInput)) {
+    console.log(userInput + " is a number.");
+    alert(userInput + " is a number.");
+} else if (charCode >= 65 && charCode <= 90) {
+    console.log(userInput + " is an uppercase letter.");
+    alert(userInput + " is an uppercase letter.");
+} else if (charCode >= 97 && charCode <= 122) {
+    console.log(userInput + " is a lowercase letter.");
+    alert(userInput + " is a lowercase letter.");
+} else {
+    console.log(userInput + " is not a valid input.");
+    alert(userInput + " is not a valid input.");
+}
+
+    </script>
+    <h1>Q2</h1>
+    <script>
+        // Prompt user to enter the first integer
+var firstInteger = parseInt(prompt("Enter the first integer:"));
+
+// Prompt user to enter the second integer
+var secondInteger = parseInt(prompt("Enter the second integer:"));
+
+// Check and display the larger integer
+if (!isNaN(firstInteger) && !isNaN(secondInteger)) {
+    if (firstInteger > secondInteger) {
+        console.log("The larger integer is: " + firstInteger);
+        alert("The larger integer is: " + firstInteger);
+    } else if (firstInteger < secondInteger) {
+        console.log("The larger integer is: " + secondInteger);
+        alert("The larger integer is: " + secondInteger);
+    } else {
+        console.log("Both integers are equal.");
+        alert("Both integers are equal.");
+    }
+} else {
+    console.log("Invalid input. Please enter valid integers.");
+    alert("Invalid input. Please enter valid integers.");
+}
+
+    </script>
+    <h1>Q3</h1>
+    <script>
+        // Prompt user to enter a number
+var userInput = parseFloat(prompt("Enter a number:"));
+
+// Check and display whether the number is positive, negative, or zero
+if (!isNaN(userInput)) {
+    if (userInput > 0) {
+        console.log(userInput + " is a positive number.");
+        alert(userInput + " is a positive number.");
+    } else if (userInput < 0) {
+        console.log(userInput + " is a negative number.");
+        alert(userInput + " is a negative number.");
+    } else {
+        console.log(userInput + " is zero.");
+        alert(userInput + " is zero.");
+    }
+} else {
+    console.log("Invalid input. Please enter a valid number.");
+    alert("Invalid input. Please enter a valid number.");
+}
+
+    </script>
+    <h1>Q4</h1>
+    <script>
+        // Prompt user to enter a character
+var character = prompt("Enter a character (string of length 1):");
+
+// Check if the entered character is a vowel
+function isVowel(char) {
+    // Convert the character to lowercase to handle both uppercase and lowercase vowels
+    var lowerChar = char.toLowerCase();
+
+    // Check if the character is a vowel
+    return lowerChar === 'a' || lowerChar === 'e' || lowerChar === 'i' || lowerChar === 'o' || lowerChar === 'u';
+}
+
+// Display the result
+if (character.length === 1 && /^[a-zA-Z]$/.test(character)) {
+    console.log("Is the character a vowel? " + isVowel(character));
+    alert("Is the character a vowel? " + isVowel(character));
+} else {
+    console.log("Invalid input. Please enter a valid single character.");
+    alert("Invalid input. Please enter a valid single character.");
+}
+
+    </script>
+    <h1>Q5</h1>
+    <script>
+        // Store correct password in a variable
+var correctPassword = "mySecretPassword";
+
+// Ask the user to enter their password
+var userPassword = prompt("Enter your password:");
+
+// Validate the entered password
+if (!userPassword) {
+    console.log("Please enter your password.");
+    alert("Please enter your password.");
+} else if (userPassword === correctPassword) {
+    console.log("Correct! The password you entered matches the original password.");
+    alert("Correct! The password you entered matches the original password.");
+} else {
+    console.log("Incorrect password.");
+    alert("Incorrect password.");
+}
+
+    </script>
+    <h1>Q6</h1>
+    <script>
+        var greeting;
+var hour = 13;
+
+if (hour < 18) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+console.log(greeting);
+
+    </script>
+    <h1>Q7</h1>
+    <script>
+        // Prompt user to enter time in 24-hour clock format
+var inputTime = parseInt(prompt("Enter the time in 24-hour clock format (e.g., 1900 for 7pm):"));
+
+// Implement different cases using if, else, and else-if statements
+if (!isNaN(inputTime) && inputTime >= 0 && inputTime <= 2400) {
+    if (inputTime >= 0000 && inputTime < 1200) {
+        console.log("Good morning!");
+        alert("Good morning!");
+    } else if (inputTime >= 1200 && inputTime < 1700) {
+        console.log("Good afternoon!");
+        alert("Good afternoon!");
+    } else if (inputTime >= 1700 && inputTime < 2100) {
+        console.log("Good evening!");
+        alert("Good evening!");
+    } else {
+        console.log("Good night!");
+        alert("Good night!");
+    }
+} else {
+    console.log("Invalid input. Please enter a valid time in 24-hour clock format.");
+    alert("Invalid input. Please enter a valid time in 24-hour clock format.");
+}
+
+    </script>
+</body>
+</html>
